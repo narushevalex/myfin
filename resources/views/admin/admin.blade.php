@@ -11,6 +11,14 @@
 <div>
     <p>Здесь будет панель администратора</p>
 
+    <table>
+        <tr><th>Имя</th><th>Начало работы</th><th>Оклад</th><th>Заведование метод. кабинетом</th><th>Тетради со ставкой 0.15</th></tr>
+        @foreach($techers as $t => $n)
+            <tr><th>{{$n['name']}}</th><th>{{$n['start_work']}}</th><th>{{$n['cash']}}</th><th>{{$n['method_room']}}</th><th>{{$n['notepad_015']}}</th></tr>
+        @endforeach
+    </table>
+
+
 </div>
 </body>
 </html>
