@@ -20,6 +20,7 @@ class Test extends TestCase
         $response->assertStatus(200);
     }
 
+//    Тестирование правильности создания таблицы
     public function test_db(){
         $this->assertDatabaseCount('teachers', 5);
     }
