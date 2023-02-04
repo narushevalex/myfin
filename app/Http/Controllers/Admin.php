@@ -49,7 +49,39 @@ class Admin extends Controller
             }elseif ($t['qualification'] == 3){
                 $t['qualification'] = 'Вторая';
             }
-
+            if ($t['honored_teacher'] == 0) {
+                $t['honored_teacher'] = 'Нет';
+            }else{
+                $t['honored_teacher'] = 'Да';
+            }
+            if ($t['candidate_science'] == 0) {
+                $t['candidate_science'] = 'Нет';
+            }else{
+                $t['candidate_science'] = 'Да';
+            }
+            if ($t['state_award'] == 0) {
+                $t['state_award'] = 'Нет';
+            }else{
+                $t['state_award'] = 'Да';
+            }
+            if ($t['badge'] == 0) {
+                $t['badge'] = 'Нет';
+            }else{
+                $t['badge'] = 'Да';
+            }
+            if ($t['education'] == 0) {
+                $t['education'] = 'Высшее';
+            } elseif ($t['education'] == 1){
+                $t['education'] = 'Бакалавриат';
+            }elseif ($t['education'] == 2){
+                $t['education'] = 'Среднее проф.';
+            }elseif ($t['education'] == 3){
+                $t['education'] = 'Начальное проф.';
+            }elseif ($t['education'] == 4){
+                $t['education'] = 'Среднее';
+            }elseif ($t['education'] == 5){
+                $t['education'] = 'Основное';
+            }
         }
         return view('admin.admin', ['teachers' => $teacher]);
     }
