@@ -14,7 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('start');
+    return redirect('login');
 });
 
-Route::get('/admin', [\App\Http\Controllers\Admin::class, 'show']);
+Route::get('/admin', [\App\Http\Controllers\Admin::class, 'show'])->name('admin');
+Route::get('/login', [\App\Http\Controllers\Input::class, 'show_form'])->name('login');
+Route::post('/login_check', [\App\Http\Controllers\Input::class, 'show'])->name('login_check');
+
+
