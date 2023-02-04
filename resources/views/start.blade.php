@@ -14,7 +14,13 @@
         @csrf
         <fieldset>
             <legend>Регистрация</legend>
+            @error('name')
+            <p>Введите имя</p>
+            @enderror
             <p><label for="name">Логин </label><input type="text" name="name"></p>
+            @error('password')
+            <p>Введите пароль</p>
+            @enderror
             <p><label for="email">Пароль </label><input type="password" name="password"></p>
         </fieldset>
         <p><input type="submit" value="Отправить"></p>
