@@ -36,7 +36,7 @@
         <p>Введите оклад</p>
         @enderror
         <p>Оклад <input type="text" name="cash"></p>
-        <p>Заведование метод. кабинетом<input type="checkbox" name="method_room"></p>
+        <p>Заведование метод. кабинетом<input type="checkbox" name="method_room" ></p>
         <p>Тетради со ставкой 0.15<input type="checkbox" name="notepad_015"></p>
         <p>Тетради со ставкой 0.1<input type="checkbox" name="notepad_01"></p>
         <p>Классное руководство<input type="checkbox" name="classroom_teacher"></p>
