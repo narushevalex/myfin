@@ -10,6 +10,7 @@
 <body>
 <div>
     <p>Привет мир</p>
+{{-- Форма фхода с ошибками валидации   --}}
     <form action="{{route('login_check')}}" method="post" name="input">
         @csrf
         <fieldset>

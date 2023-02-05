@@ -9,6 +9,7 @@
 </head>
 <body>
 Здесь будет регистрация
+{{-- Форма регистрации с ошибками валидации   --}}
 <form action="{{route('regist_check')}}" method="post">
     @csrf
     <fieldset>
@@ -60,7 +61,7 @@
         @error('password_res')
         <p>Повторите пароль</p>
         @enderror
-        <p>Повторите пароль <input type="password" name="password_res"></p>
+        <p>Повторите пароль <input type="password" name="password_confirmation"></p>
     </fieldset>
     <p><input type="submit" value="Отправить"></p>
 </form>

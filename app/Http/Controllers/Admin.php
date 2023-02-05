@@ -14,6 +14,8 @@ class Admin extends Controller
     public function show(){
         $teacher = teacher::all();
 
+        //Преобразовать во внешнюю функцию!!!
+
         foreach ($teacher as $n => $t){
             if ($t['method_room'] == 0) {
                 $t['method_room'] = 'Нет';
