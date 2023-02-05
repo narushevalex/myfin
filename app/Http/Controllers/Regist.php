@@ -69,7 +69,6 @@ class Regist extends Controller
         $this->data = array_merge($this->data ,$data_check, $request->input());
         $data_for_send = $this->bool($this->data);
         $data_teacher = $this->hash_teacher($data_for_send);
-        dd(bcrypt($data_for_send['password']));
         //Записываем в БД
         $teacher = teacher::create($data_teacher);
         $login = Authentication::create([
