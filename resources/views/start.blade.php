@@ -14,11 +14,14 @@
     <form action="{{route('login_check')}}" method="post" name="input">
         @csrf
         <fieldset>
+            @error('email')
+            <p>{{$message}}</p>
+            @enderror
             <legend>Вход</legend>
-            @error('name')
+            @error('login')
             <p>Введите имя</p>
             @enderror
-            <p>Логин <input type="text" name="name"></p>
+            <p>Логин <input type="text" name="login"></p>
             @error('password')
             <p>Введите пароль</p>
             @enderror
